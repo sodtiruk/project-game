@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    private const float SMOOTH_TIME = 0.3f;
+    private const float SMOOTH_TIME = 0.2f;
     public bool LockX, LockY, LockZ;
     public float offSetZ = -8.5f;
     public bool useSmoothing = true;
