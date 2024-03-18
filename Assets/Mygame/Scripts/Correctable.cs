@@ -9,6 +9,7 @@ public class Correctable : MonoBehaviour
     // Start is called before the first frame update
     public GameObject player;
     public AudioSource sfx;
+    public float ScaleUp = 0.1f; 
     void Start()
     { 
         player = GameObject.FindWithTag("Player");
@@ -30,7 +31,7 @@ public class Correctable : MonoBehaviour
        if (other.gameObject.tag == "Player") // check tag
         {
             sfx.Play();
-            player.transform.localScale = new Vector3(player.transform.localScale.x + 1f, player.transform.localScale.y + 1f, player.transform.localScale.z + 1f);
+            player.transform.localScale = new Vector3(player.transform.localScale.x + ScaleUp, player.transform.localScale.y + ScaleUp, player.transform.localScale.z + ScaleUp);
             Destroy(gameObject);
         } 
     }
