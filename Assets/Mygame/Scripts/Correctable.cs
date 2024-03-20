@@ -9,14 +9,15 @@ public class Correctable : MonoBehaviour
     // Start is called before the first frame update
     public GameObject player;
     public AudioSource sfx;
-    public float ScaleUp = 0.1f; 
+    public float ScaleUp = 0.1f;
+    public string nameSound;
     void Start()
     { 
         player = GameObject.FindWithTag("Player");
         
         // find gameObject sound
         // and then keep Gameobject into sfx
-        GameObject soundObject = GameObject.Find("BurgerSfx");
+        GameObject soundObject = GameObject.Find(nameSound);
         sfx = soundObject.GetComponent<AudioSource>();
     }
 
